@@ -1,0 +1,10 @@
+{
+    "orgName": "ccoenraets Company",
+    "edition": "Developer",
+    "orgPreferences": {
+        "enabled": ["S1DesktopEnabled", "ChatterEnabled"]
+    },
+    "features": [
+        "DebugApex", "AuthorApex"
+    ]
+}

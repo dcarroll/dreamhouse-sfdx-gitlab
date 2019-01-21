@@ -1,0 +1,32 @@
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+job 1:
+  stage: build
+  script:
+   - npm install -g sfdx-cli
+   - sfdx --help
+   - scripts/hub-auth.sh
+   - scripts/source-build.sh gitlab_build_$CI_BUILD_ID
+   - scripts/setup-review-app.sh gitlab_build_$CI_BUILD_ID
+   - scripts/run-test.sh gitlab_build_$CI_BUILD_ID
+   - sfdx force:org:delete -u gitlab_build_$CI_BUILD_ID -p
+  except: 
+    - master
+
+job 2:
+  stage: deploy
+  script:
+   - npm install -g sfdx-cli
+   - sfdx --help
+   - scripts/hub-auth.sh $DECRYPTION_KEY $DECRYPTION_IV
+   - scripts/source-build.sh gitlab_build_$CI_BUILD_ID
+   - echo "Now I want to create a package."
+  only: 
+    - master
+

@@ -1,0 +1,36 @@
+.THIS {
+    min-height: 226px;
+}
+
+.THIS .property-pic {
+    height: 90px;
+    width: 90px;
+    border: none;
+}
+
+.THIS .broker-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.THIS h3 {
+    font-size: 16px;
+    color: #0070D2;
+    margin-top: 2px;
+}
+
+.THIS .select {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.THIS .broker {
+    line-height: 1rem;
+}
+
+.THIS .slds-icon--small {
+    height: 1.3rem;
+    width: 1.3rem;
+}
