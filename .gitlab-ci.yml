@@ -27,6 +27,10 @@ job 2:
    - scripts/hub-auth.sh $DECRYPTION_KEY $DECRYPTION_IV
    - scripts/source-build.sh gitlab_build_$CI_BUILD_ID
    - echo "Now I want to create a package."
+ job 3:
+   stage: test
+   script:
+   - scripts/run-test.sh 
   only: 
     - master
 
