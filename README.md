@@ -73,3 +73,5 @@ Optional instruction to enable visual search in the **Property Finder** and **Pr
 1. Repeat the last step for the **Property Explorer** page.
 
 You can now search houses by uploading (or dropping) a picture in the visual search box that is part of the Filters component on the **Property Finder** and **Property Explorer** pages. 
+
+test test test test
