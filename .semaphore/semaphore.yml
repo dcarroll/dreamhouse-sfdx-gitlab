@@ -35,7 +35,8 @@ blocks:
         commands:
           - checkout
           - echo "make rspec"
-
+          - echo "$AWS_ACCESS_KEY_ID"
+          - echo "$AWS_SECRET_ACCESS_KEY"
       - name: Lint code
         commands:
           - checkout
