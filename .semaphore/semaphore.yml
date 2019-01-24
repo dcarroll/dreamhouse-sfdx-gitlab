@@ -23,6 +23,8 @@ blocks:
           - sfdx --help
   - name: "Authenticate"
     task:
+      secrets:
+        - name: myapp-jwt
       jobs:
       - name: "JWT Auth"
         commands:
