@@ -19,6 +19,7 @@ blocks:
           - echo $APP_ENV
           - echo "Docker build..."
           - echo "done"
+          - npm install -g sfdx-cli
 
   - name: "Smoke tests"
     task:
