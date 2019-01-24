@@ -30,6 +30,9 @@ blocks:
 
   - name: "Unit tests"
     task:
+      env_vars:
+        - name: TESTME
+          value: "GODSDFLKDFI"
       jobs:
       - name: RSpec
         commands:
@@ -37,6 +40,7 @@ blocks:
           - echo "make rspec"
           - echo $AWS_ACCESS_KEY_ID
           - echo $AWS_SECRET_ACCESS_KEY
+          - echo $TESTME
       - name: Lint code
         commands:
           - checkout
